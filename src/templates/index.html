@@ -1,0 +1,23 @@
+---
+title: Index page
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+{% import "./data/data.html" as content %}
+{% import "./helpers/_card-ninja.html" as ninja %}
+
+  <section class="ninjas">
+    <div class="ninjas__wrapper">
+      <ul class="ninjas__list ninjas-list">
+        {% for item in content.contentIndex %}
+          <li class="ninjas-list__item">
+            {{ninja.cardNinja(item.name)}}
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </section>
+
+{% endblock %}

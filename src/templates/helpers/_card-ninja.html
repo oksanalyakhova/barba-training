@@ -1,0 +1,8 @@
+{% macro cardNinja(name) %}
+  <a href="{{name}}.html" class="ninja">
+    <span class="ninja__img" style="background-image: url('./img/{{name}}.jpg')"></span>
+    <span class="ninja__title">
+      {{name}}
+    </span>
+  </a>
+{% endmacro %}
