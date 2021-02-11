@@ -1,8 +1,6 @@
 .ninja
 	position: relative
 	display: block
-	width: 100%
-	height: 100%
 	overflow: hidden
 
 	&__img
@@ -17,9 +15,7 @@
 		transform: translate(-30%, 0)
 
 	&__title
-		position: absolute
-		bottom: 100px
-		left: 30px
+		+center(both)
 		font-family: $rubic
 		+fs(20)
 		line-height: 1.6

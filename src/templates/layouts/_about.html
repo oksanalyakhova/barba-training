@@ -2,21 +2,22 @@
 
 {% block content %}
 
-<section id="{{selector}}" class="section section_{{selector}} {{selector}}">
-  <div class="container">
-    <div class="section__wrapper {{selector}}__wrapper">
-      <div class="section__content {{selector}}__content">
-        <div class="img-wrap">
+<main data-barba="wrapper" class="{{main}}">
+  <div class="barba-container" data-barba="container" data-barba-namespace="about">
+    <section id="about" class="about about_{{selector}} {{selector}}">
+      <div class="about__content {{selector}}__content">
+        <div class="about__img {{selector}}__img">
           <img src="./img/{{selector}}.jpg" alt="{{selector}}-image">
+          <h1 class="about__title {{selector}}__title">{{selector}}</h1>
         </div>
-        <div class="text-wrap">
+        <div class="about__text {{selector}}__text">
           <p>
             {{sectionText}}
           </p>
         </div>
       </div>
-    </div>
+    </section>
   </div>
-</section>
+</main>
 
 {% endblock %}

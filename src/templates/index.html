@@ -1,5 +1,6 @@
 ---
 title: Index page
+main: index
 ---
 {% extends "layouts/_layout.html" %}
 
@@ -8,16 +9,18 @@ title: Index page
 {% import "./data/data.html" as content %}
 {% import "./helpers/_card-ninja.html" as ninja %}
 
-  <section class="ninjas">
-    <div class="ninjas__wrapper">
-      <ul class="ninjas__list ninjas-list">
-        {% for item in content.contentIndex %}
-          <li class="ninjas-list__item">
-            {{ninja.cardNinja(item.name)}}
-          </li>
-        {% endfor %}
-      </ul>
-    </div>
-  </section>
+<main data-barba="wrapper" class="{{main}}">
+  <div class="barba-container" data-barba="container" data-barba-namespace="home">
+    <section class="ninjas">
+      <div class="ninjas__wrapper">
+        <div class="ninjas__list ninjas-list">
+          {% for item in content.contentIndex %}
+            {{ninja.cardNinja('ninjas-list__item', item.name)}}
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
 
 {% endblock %}

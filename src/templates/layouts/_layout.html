@@ -17,9 +17,10 @@
   {% include "partials/_header.html" %}
   <!-- END header -->
   <!-- BEGIN content -->
-  <main id="{{main}}" class="{{main}}">
-    {% block content %}{% endblock %}
-  </main>
+  <div class="scroll-message">
+    <div class="text-letters">scroll down</div>
+  </div>
+  {% block content %}{% endblock %}
   <!-- END content -->
 </div>
 

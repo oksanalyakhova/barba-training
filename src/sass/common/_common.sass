@@ -21,11 +21,33 @@ body
 	color: $bl
 	background-color: $bg
 	overflow-x: hidden
+	overflow-y: unset !important
 	+smooth-scroll
 	+trans(opacity)
 
 	&.loaded
 		opacity: 1
+
+	.out
+		position: relative
+
+		.scroll-message
+			+center(h)
+			position: fixed
+			top: calc(100vh - 50px)
+			z-index: 1
+			font-family: $bold
+			color: $wh
+			text-shadow: 1px 1px 2px $wh
+
+	main
+		display: grid
+		grid-template-columns: 100vw
+		grid-template-rows: 1fr
+
+		& > div
+			grid-column: 1
+			grid-row: 1
 
 a
 	display: block
